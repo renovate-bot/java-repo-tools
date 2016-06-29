@@ -22,4 +22,12 @@ limitations under the License.
     <ignoreVersion type="regex">.*-b[0-9]*</ignoreVersion>
     <ignoreVersion type="regex">.*-rc(-)?[0-9]*</ignoreVersion>
   </ignoreVersions>
+  <rules>
+    <!-- SendGrid 3 libraries are broken in App Engine standard environment -->
+    <rule groupId="com.sendgrid" artifactId="sendgrid-java" comparisonMethod="maven">
+      <ignoreVersions>
+        <ignoreVersion type="regex">3.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+  </rules>
 </ruleset>
