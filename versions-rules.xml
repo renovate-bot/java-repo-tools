@@ -21,6 +21,7 @@ limitations under the License.
     <ignoreVersion type="regex">.*-beta.*</ignoreVersion>
     <ignoreVersion type="regex">.*-b[0-9]*</ignoreVersion>
     <ignoreVersion type="regex">.*-pre.*</ignoreVersion>
+    <ignoreVersion type="regex">.*public_draft</ignoreVersion>
     <ignoreVersion type="regex">.*-rc(-)?[0-9]*</ignoreVersion>
   </ignoreVersions>
   <rules>
