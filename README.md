@@ -6,7 +6,7 @@ Status](https://travis-ci.org/GoogleCloudPlatform/java-repo-tools.svg?branch=mas
 Status](https://codecov.io/gh/GoogleCloudPlatform/java-repo-tools/branch/master/graph/badge.svg)](https://codecov.io/gh/GoogleCloudPlatform/java-repo-tools)
 
 This is a collection of common tools used to maintain and test Java repositories
-in the [GoogleCloudPlaftorm](https://github.com/GoogleCloudPlatform)
+in the [GoogleCloudPlatform](https://github.com/GoogleCloudPlatform)
 organization.
 
 
