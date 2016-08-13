@@ -31,5 +31,24 @@ limitations under the License.
         <ignoreVersion type="regex">3.*</ignoreVersion>
       </ignoreVersions>
     </rule>
+    <!-- Mailjet made a breaking change between 4.0.1 and 4.0.4. -->
+    <rule groupId="com.mailjet" artifactId="mailjet-client" comparisonMethod="maven">
+      <ignoreVersions>
+        <ignoreVersion type="regex">4.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- Logging v2 is a breaking change from v1, but samples are still v1. -->
+    <rule groupId="com.google.apis" artifactId="google-api-services-logging" comparisonMethod="maven">
+      <ignoreVersions>
+        <ignoreVersion type="regex">v2.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
+    <!-- Storage transfer library has breaking changes between
+         v1-rev1-1.20.0 and v1-rev7-1.22.0 -->
+    <rule groupId="com.google.apis" artifactId="google-api-services-storagetransfer" comparisonMethod="maven">
+      <ignoreVersions>
+        <ignoreVersion type="regex">v1-.*</ignoreVersion>
+      </ignoreVersions>
+    </rule>
   </rules>
 </ruleset>
