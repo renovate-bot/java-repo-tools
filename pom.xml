@@ -13,48 +13,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project>
   <modelVersion>4.0.0</modelVersion>
+  <version>1.0.0</version>
 
-  <groupId>com.google.cloud.samples</groupId>
+  <groupId>com.google.cloud</groupId>
   <artifactId>shared-configuration</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-
-  <name>${project.groupId}:${project.artifactId}</name>
-  <description>A shared configuration for Google Cloud samples. This defines
-    common plugins and their configurations for testing, maintenance, and style
-    checks.</description>
-  <url>https://github.com/GoogleCloudPlatform/java-repo-tools</url>
-
-  <licenses>
-    <license>
-      <name>The Apache License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
-
-  <developers>
-    <developer>
-      <name>Les Vogel</name>
-      <email>lesv@google.com</email>
-      <organization>Google Inc.</organization>
-      <organizationUrl>https://cloud.google.com</organizationUrl>
-    </developer>
-    <developer>
-      <name>Tim Swast</name>
-      <email>swast@google.com</email>
-      <organization>Google Inc.</organization>
-      <organizationUrl>https://cloud.google.com</organizationUrl>
-    </developer>
-  </developers>
-
-  <scm>
-    <url>https://github.com/GoogleCloudPlatform/java-repo-tools</url>
-    <connection>scm:git:https://github.com/GoogleCloudPlatform/java-repo-tools.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com/GoogleCloudPlatform/java-repo-tools.git</developerConnection>
-    <tag>v1.0.0</tag>
-  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -65,43 +30,9 @@ limitations under the License.
     <maven>3.1.0</maven>
   </prerequisites>
 
-  <profiles>
-    <!-- Code signing for release: http://stackoverflow.com/a/14869692/101923 -->
-    <profile>
-      <id>release</id>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-gpg-plugin</artifactId>
-            <version>1.6</version>
-            <executions>
-              <execution>
-                <id>sign-artifacts</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>sign</goal>
-                </goals>
-                <configuration>
-                  <executable>gpg2</executable>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-release-plugin</artifactId>
-            <version>2.5.3</version>
-            <configuration>
-              <tagBase>scm:git:ssh://git@github.com/GoogleCloudPlatform/java-repo-tools.git</tagBase>
-              <tagNameFormat>v@{project.version}</tagNameFormat>
-              <releaseProfiles>release</releaseProfiles>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
+  <modules>
+    <module>test</module>
+  </modules>
 
   <build>
     <plugins>
