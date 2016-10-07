@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.google.cloud.samples</groupId>
@@ -50,9 +50,10 @@ limitations under the License.
   </developers>
 
   <scm>
-    <connection>scm:git:git://github.com/GoogleCloudPlatform/java-repo-tools.git</connection>
-    <developerConnection>scm:git:ssh://github.com:GoogleCloudPlatform/java-repo-tools.git</developerConnection>
-    <url>http://github.com/GoogleCloudPlatform/java-repo-tools/tree/master</url>
+    <url>https://github.com/GoogleCloudPlatform/java-repo-tools</url>
+    <connection>scm:git:https://github.com/GoogleCloudPlatform/java-repo-tools.git</connection>
+    <developerConnection>scm:git:ssh://git@github.com/GoogleCloudPlatform/java-repo-tools.git</developerConnection>
+    <tag>v1.0.0</tag>
   </scm>
 
   <properties>
@@ -67,13 +68,7 @@ limitations under the License.
   <profiles>
     <!-- Code signing for release: http://stackoverflow.com/a/14869692/101923 -->
     <profile>
-      <id>release-sign-artifacts</id>
-      <activation>
-        <property>
-          <name>performRelease</name>
-          <value>true</value>
-        </property>
-      </activation>
+      <id>release</id>
       <build>
         <plugins>
           <plugin>
@@ -87,8 +82,21 @@ limitations under the License.
                 <goals>
                   <goal>sign</goal>
                 </goals>
+                <configuration>
+                  <executable>gpg2</executable>
+                </configuration>
               </execution>
             </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-release-plugin</artifactId>
+            <version>2.5.3</version>
+            <configuration>
+              <tagBase>scm:git:ssh://git@github.com/GoogleCloudPlatform/java-repo-tools.git</tagBase>
+              <tagNameFormat>v@{project.version}</tagNameFormat>
+              <releaseProfiles>release</releaseProfiles>
+            </configuration>
           </plugin>
         </plugins>
       </build>
@@ -96,21 +104,6 @@ limitations under the License.
   </profiles>
 
   <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-release-plugin</artifactId>
-          <version>2.5.3</version>
-          <configuration>
-            <tagBase>https://svn.mycompany.com/repos/myapplication/releases</tagBase>
-            <tagBase>scm:git:ssh://github.com:GoogleCloudPlatform/java-repo-tools.git</tagBase>
-            <tagNameFormat>v@{project.version}</tagNameFormat>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-
     <plugins>
       <plugin>
         <!-- Unit tests -->
@@ -174,11 +167,6 @@ limitations under the License.
             </goals>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <inherited>false</inherited>
       </plugin>
     </plugins>
   </build>
