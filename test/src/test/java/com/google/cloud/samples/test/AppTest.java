@@ -37,6 +37,6 @@ public class AppTest {
     App.main(new String[0]);
 
     String greeting = out.toString();
-    assertThat(greeting).contains("Hello World!");
+    assertThat(greeting).named("greeting").contains("Hello World!");
   }
 }
