@@ -24,3 +24,25 @@ perform the release to upload it to Maven Central.
 
     mvn release:perform
 
+## Release the shared-configuration package
+
+After releasing the checkstyle-config package, update the root `pom.xml` to
+depend on the released version.
+
+    # Use the latest released version of checkstyle-config.
+    vim pom.xml
+    git add pom.xml
+    git commit
+
+Next, prepare a release.
+
+    mvn release:clean release:prepare
+
+Next, update the version of the parent in `test/pom.xml`. Also update `pom.xml`
+to use the latest snapshot of checkstyle-config.
+
+Then, make a pull request for the release. After verifying that it works,
+perform the release to upload it to Maven Central.
+
+    mvn release:perform
+
