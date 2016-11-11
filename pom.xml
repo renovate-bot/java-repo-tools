@@ -182,7 +182,7 @@ limitations under the License.
           <dependency>
             <groupId>com.google.cloud.samples</groupId>
             <artifactId>checkstyle-configuration</artifactId>
-            <version>1.0.1-SNAPSHOT</version>
+            <version>1.0.0</version>
           </dependency>
         </dependencies>
         <executions>
