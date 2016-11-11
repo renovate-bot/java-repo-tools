@@ -18,7 +18,7 @@ limitations under the License.
 
   <groupId>com.google.cloud.samples</groupId>
   <artifactId>checkstyle-configuration</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
@@ -51,7 +51,7 @@ limitations under the License.
     <url>https://github.com/GoogleCloudPlatform/java-repo-tools</url>
     <connection>scm:git:https://github.com/GoogleCloudPlatform/java-repo-tools.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/GoogleCloudPlatform/java-repo-tools.git</developerConnection>
-    <tag>v1.0.0</tag>
+    <tag>checkstyle-config-v1.0.0</tag>
   </scm>
 
   <distributionManagement>
