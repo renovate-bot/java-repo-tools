@@ -25,6 +25,7 @@ print_usage () {
   echo >&2
   echo "server-type can be any of the following:" >&2
   echo "  appengine" >&2
+  echo "  appengine:run" >&2
   echo "  jetty" >&2
   echo "  spring-boot" >&2
 }
@@ -37,6 +38,10 @@ fi
 case $1 in
   appengine)
     mvn_plugin="appengine:devserver"
+    server_started_message="localhost:8080"
+    ;;
+  appengine:run)
+    mvn_plugin="appengine:run"
     server_started_message="localhost:8080"
     ;;
   jetty)
