@@ -44,12 +44,5 @@ limitations under the License.
         <ignoreVersion type="regex">v2.*</ignoreVersion>
       </ignoreVersions>
     </rule>
-    <!-- Storage transfer library has breaking changes between
-         v1-rev1-1.20.0 and v1-rev7-1.22.0 -->
-    <rule groupId="com.google.apis" artifactId="google-api-services-storagetransfer" comparisonMethod="maven">
-      <ignoreVersions>
-        <ignoreVersion type="regex">v1-.*</ignoreVersion>
-      </ignoreVersions>
-    </rule>
   </rules>
 </ruleset>
