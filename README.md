@@ -19,8 +19,7 @@ This package is meant to be used as a parent pom, so that checkstyle and other p
 <parent>
   <groupId>com.google.cloud</groupId>
   <artifactId>shared-configuration</artifactId>
-  <version>1.0.0</version>
-  <relativePath>java-repo-tools</relativePath>
+  <version>1.0.1</version>
 </parent>
 ```
 
