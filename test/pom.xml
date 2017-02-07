@@ -26,9 +26,14 @@ limitations under the License.
   <parent>
     <artifactId>shared-configuration</artifactId>
     <groupId>com.google.cloud.samples</groupId>
-    <version>1.0.2-SNAPSHOT</version>
+    <version>1.0.2</version>
     <relativePath>..</relativePath>
   </parent>
+
+  <properties>
+    <maven.compiler.source>1.7</maven.compiler.source> <!-- REQUIRED -->
+    <maven.compiler.target>1.7</maven.compiler.target> <!-- REQUIRED -->
+  </properties>
 
   <dependencies>
     <!-- Test Dependencies -->
