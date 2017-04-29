@@ -57,7 +57,7 @@ limitations under the License.
     <url>https://github.com/GoogleCloudPlatform/java-repo-tools</url>
     <connection>scm:git:https://github.com/GoogleCloudPlatform/java-repo-tools.git</connection>
     <developerConnection>scm:git:ssh://git@github.com/GoogleCloudPlatform/java-repo-tools.git</developerConnection>
-    <tag>v1.0.3-alpha</tag>
+    <tag>v1.0.1</tag>
   </scm>
 
   <distributionManagement>
@@ -75,15 +75,15 @@ limitations under the License.
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <!-- Plugin versions, so that they can get auto-updated by the versions plugin. -->
-    <codehaus-versions-maven-plugin-version>2.3</codehaus-versions-maven-plugin-version>
-    <maven-gpg-plugin-version>1.6</maven-gpg-plugin-version>
-    <maven-release-plugin-version>2.5.3</maven-release-plugin-version>
-    <nexus-staging-maven-plugin-version>1.6.7</nexus-staging-maven-plugin-version>
+
+    <maven-release-plugin>2.5.3</maven-release-plugin>
+    <nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin>
+    <versions-maven-plugin>2.3</versions-maven-plugin>
+    <maven-gpg-plugin>1.6</maven-gpg-plugin>
   </properties>
 
   <prerequisites>
-    <maven>3.1.0</maven>
+    <maven>3.5.0</maven>
   </prerequisites>
 
   <profiles>
@@ -95,7 +95,7 @@ limitations under the License.
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-gpg-plugin</artifactId>
-            <version>${maven-gpg-plugin-version}</version>
+            <version>${maven-gpg-plugin}</version>
             <executions>
               <execution>
                 <id>sign-artifacts</id>
@@ -118,7 +118,7 @@ limitations under the License.
         <plugin>
           <groupId>org.sonatype.plugins</groupId>
           <artifactId>nexus-staging-maven-plugin</artifactId>
-          <version>${nexus-staging-maven-plugin-version}</version>
+          <version>${nexus-staging-maven-plugin}</version>
           <extensions>true</extensions>
           <configuration>
             <serverId>ossrh</serverId>
@@ -130,7 +130,7 @@ limitations under the License.
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>${maven-release-plugin-version}</version>
+          <version>${maven-release-plugin}</version>
           <configuration>
             <tagBase>scm:git:ssh://git@github.com/GoogleCloudPlatform/java-repo-tools.git</tagBase>
             <tagNameFormat>checkstyle-config-v@{project.version}</tagNameFormat>
@@ -145,7 +145,7 @@ limitations under the License.
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>versions-maven-plugin</artifactId>
-        <version>${codehaus-versions-maven-plugin-version}</version>
+        <version>${versions-maven-plugin}</version>
       </plugin>
       <!-- Release (not inherited) -->
       <plugin>
