@@ -68,7 +68,8 @@ limitations under the License.
     <!-- SendGrid 3 libraries are broken in App Engine standard environment -->
     <rule groupId="com.sendgrid" artifactId="sendgrid-java" comparisonMethod="maven">
       <ignoreVersions>
-        <ignoreVersion type="regex">3.*</ignoreVersion>
+<!--         <ignoreVersion type="regex">3.*</ignoreVersion> -->
+        <ignoreVersion type="regex">.*</ignoreVersion> <!-- Lock it for now - until we can updade and test updates -->
       </ignoreVersions>
     </rule>
 
