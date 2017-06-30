@@ -79,7 +79,7 @@ limitations under the License.
 
     <jacoco-maven-plugin>0.7.9</jacoco-maven-plugin>
     <plexus-compiler-javac-errorprone>2.8.2</plexus-compiler-javac-errorprone>
-    <error_prone_core>2.0.19</error_prone_core>
+    <error_prone_core>2.0.21</error_prone_core>
 
     <maven-failsafe-plugin>2.20</maven-failsafe-plugin>
     <maven-surefire-plugin>2.20</maven-surefire-plugin>
@@ -98,7 +98,7 @@ limitations under the License.
 
     <maven-release-plugin>2.5.3</maven-release-plugin>
     <nexus-staging-maven-plugin>1.6.8</nexus-staging-maven-plugin>
-    <versions-maven-plugin>2.3</versions-maven-plugin>
+    <versions-maven-plugin>2.4</versions-maven-plugin>
     <maven-gpg-plugin>1.6</maven-gpg-plugin>
   </properties>
 
