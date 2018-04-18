@@ -18,7 +18,7 @@ limitations under the License.
 
   <groupId>com.google.cloud.samples</groupId>
   <artifactId>shared-configuration</artifactId>
-  <version>1.0.9-SNAPSHOT</version>
+  <version>1.0.9</version>
   <packaging>pom</packaging>
 
   <name>${project.groupId}:${project.artifactId}</name>
@@ -58,6 +58,12 @@ limitations under the License.
     <developer>
       <name>Kurtis Van Gent</name>
       <email>kvg@google.com</email>
+      <organization>Google Inc.</organization>
+      <organizationUrl>https://cloud.google.com</organizationUrl>
+    </developer>
+    <developer>
+      <name>Dane Zeke Liergaard</name>
+      <email>dzlier@google.com</email>
       <organization>Google Inc.</organization>
       <organizationUrl>https://cloud.google.com</organizationUrl>
     </developer>
@@ -205,7 +211,7 @@ limitations under the License.
           <dependency>
             <groupId>com.google.cloud.samples</groupId>
             <artifactId>checkstyle-configuration</artifactId>
-            <version>1.0.5-SNAPSHOT</version>
+            <version>1.0.5</version>
           </dependency>
           <dependency>
             <groupId>com.puppycrawl.tools</groupId>
