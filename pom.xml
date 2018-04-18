@@ -61,6 +61,12 @@ limitations under the License.
       <organization>Google Inc.</organization>
       <organizationUrl>https://cloud.google.com</organizationUrl>
     </developer>
+    <developer>
+      <name>Dane Zeke Liergaard</name>
+      <email>dzlier@google.com</email>
+      <organization>Google Inc.</organization>
+      <organizationUrl>https://cloud.google.com</organizationUrl>
+    </developer>
   </developers>
 
   <scm>
