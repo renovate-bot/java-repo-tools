@@ -190,6 +190,9 @@ limitations under the License.
             </goals>
           </execution>
         </executions>
+        <configuration>
+          <reportNameSuffix>sponge_log</reportNameSuffix>
+        </configuration>
       </plugin>
 
       <plugin> <!-- Style Check -->
