@@ -197,7 +197,7 @@ limitations under the License.
           <plugin><!-- SPOTBUGS -->
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>4.4.1</version>
+            <version>4.4.2</version>
             <executions>
               <execution>
                 <id>analyze-compile</id>
@@ -211,7 +211,7 @@ limitations under the License.
               <dependency>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs</artifactId>
-                <version>4.4.1</version>
+                <version>4.4.2</version>
               </dependency>
               <dependency>
                 <groupId>com.google.cloud.samples</groupId>
@@ -376,7 +376,7 @@ limitations under the License.
     <dependency>
       <groupId>com.github.spotbugs</groupId>
       <artifactId>spotbugs-annotations</artifactId>
-      <version>4.4.1</version>
+      <version>4.4.2</version>
       <optional>true</optional>
     </dependency>
     <dependency>
