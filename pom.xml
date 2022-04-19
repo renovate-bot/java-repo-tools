@@ -28,7 +28,7 @@ limitations under the License.
     <nexus-staging-maven-plugin>1.6.12</nexus-staging-maven-plugin>
     <versions-maven-plugin>2.8.1</versions-maven-plugin>
     <maven-gpg-plugin>1.6</maven-gpg-plugin>
-    <pmdVersion>6.43.0</pmdVersion>
+    <pmdVersion>6.44.0</pmdVersion>
     <skipTests>false</skipTests>
   </properties>
 
@@ -197,7 +197,7 @@ limitations under the License.
           <plugin><!-- SPOTBUGS -->
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs-maven-plugin</artifactId>
-            <version>4.5.3.0</version>
+            <version>4.6.0.0</version>
             <executions>
               <execution>
                 <id>analyze-compile</id>
@@ -311,7 +311,7 @@ limitations under the License.
               <dependency>
                 <groupId>com.puppycrawl.tools</groupId>
                 <artifactId>checkstyle</artifactId>
-                <version>10.0</version>
+                <version>10.1</version>
               </dependency>
             </dependencies>
             <executions>
@@ -393,7 +393,7 @@ limitations under the License.
       <plugin> <!-- Unit Tests -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0-M5</version>
+        <version>3.0.0-M6</version>
         <configuration>
           <skipTests>${skipTests}</skipTests>
           <reportNameSuffix>sponge_log</reportNameSuffix>
@@ -404,7 +404,7 @@ limitations under the License.
       <plugin> <!-- FAILSAFE -->
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>3.0.0-M5</version>
+        <version>3.0.0-M6</version>
         <executions>
           <execution>
             <goals>
