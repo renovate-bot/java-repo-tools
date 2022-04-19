@@ -24,7 +24,7 @@ limitations under the License.
     <javac.version>9+181-r4173-1</javac.version>
 
     <maven-release-plugin>2.5.3</maven-release-plugin><!-- could be 3.0.0-M1 -->
-    <maven-compiler-plugin>3.10.0</maven-compiler-plugin>
+    <maven-compiler-plugin>3.10.1</maven-compiler-plugin>
     <nexus-staging-maven-plugin>1.6.12</nexus-staging-maven-plugin>
     <versions-maven-plugin>2.8.1</versions-maven-plugin>
     <maven-gpg-plugin>1.6</maven-gpg-plugin>
