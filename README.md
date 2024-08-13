@@ -30,7 +30,7 @@ Please ensure that samples function without this parent definition.
     <parent>
         <groupId>com.google.cloud.samples</groupId>
         <artifactId>shared-configuration</artifactId>
-        <version>1.0.19</version>
+        <version>1.2.1</version>
     </parent>
 ```
 
